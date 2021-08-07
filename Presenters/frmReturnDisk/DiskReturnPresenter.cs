@@ -57,6 +57,9 @@ namespace Presenters.Disk
               
             
         }
+        /**
+         * Gọi sau hàm GetCustomerReserve()
+         */
         public String GetTitleName()
         {
             int titleId = _onHoldData.TitleID;
@@ -65,6 +68,9 @@ namespace Presenters.Disk
                              select t.Name).FirstOrDefault().ToString();
             return titleName;
         }
+        /**
+         * gọi sau hàm  GetCustomerReserve()
+         */
         public void removeOnholdToCustomer()
         {
             _context.MessageOnHolds.Remove(_onHoldData);

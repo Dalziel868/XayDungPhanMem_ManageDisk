@@ -58,7 +58,6 @@
     <Compile Include="Models\LateCharge.cs" />
     <Compile Include="Models\ManageDisk.cs" />
     <Compile Include="Models\MessageOnHold.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\Title.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -19,7 +19,6 @@ namespace Models.Models
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<LateCharge> LateCharges { get; set; }
         public virtual DbSet<MessageOnHold> MessageOnHolds { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Title> Titles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

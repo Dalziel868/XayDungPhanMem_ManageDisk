@@ -9,6 +9,9 @@ namespace Models.Models
     [Table("BillDetail")]
     public partial class BillDetail
     {
+        [Key]
+        public Guid RowID { get; set; }
+
         public int BillID { get; set; }
 
         public int DiskID { get; set; }
@@ -18,9 +21,6 @@ namespace Models.Models
         public DateTime? ReturnDate { get; set; }
 
         public int? LateChargeID { get; set; }
-
-        [Key]
-        public Guid RowID { get; set; }
 
         public virtual C_Disk C_Disk { get; set; }
 
