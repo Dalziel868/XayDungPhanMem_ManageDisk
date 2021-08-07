@@ -1,0 +1,6 @@
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\bin\Debug\DTO.dll
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\bin\Debug\DTO.pdb
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\obj\Debug\DTO.dll
+D:\VSUALO\072021\ManageDisk_XDPM\DTO\obj\Debug\DTO.pdb

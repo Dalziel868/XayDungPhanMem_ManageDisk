@@ -1,0 +1,12 @@
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\Models.dll.config
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\Models.dll
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\Models.pdb
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\EntityFramework.dll
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\EntityFramework.xml
+D:\VSUALO\072021\ManageDisk_XDPM\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\VSUALO\072021\ManageDisk_XDPM\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\VSUALO\072021\ManageDisk_XDPM\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\VSUALO\072021\ManageDisk_XDPM\Models\obj\Debug\Models.csproj.CopyComplete
+D:\VSUALO\072021\ManageDisk_XDPM\Models\obj\Debug\Models.dll
+D:\VSUALO\072021\ManageDisk_XDPM\Models\obj\Debug\Models.pdb

@@ -1,0 +1,9 @@
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\bin\Debug\IViews_Presenters.dll
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\bin\Debug\IViews_Presenters.pdb
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\obj\Debug\IViews_Presenters.csprojAssemblyReference.cache
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\obj\Debug\IViews_Presenters.csproj.CoreCompileInputs.cache
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\obj\Debug\IViews_Presenters.csproj.CopyComplete
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\obj\Debug\IViews_Presenters.dll
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\obj\Debug\IViews_Presenters.pdb
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\bin\Debug\DTO.dll
+D:\VSUALO\072021\ManageDisk_XDPM\IViews_Presenters\bin\Debug\DTO.pdb
