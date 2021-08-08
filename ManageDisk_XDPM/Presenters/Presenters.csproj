@@ -58,6 +58,7 @@
     <Compile Include="frmPayChargeLate\LateChargePresenter.cs" />
     <Compile Include="frmAddCustomer\CustomerForCreatePresenter.cs" />
     <Compile Include="frmRentDisk\CustomerForRentDiskPresenter.cs" />
+    <Compile Include="frmReserveDisk\ReserveDiskPresenter.cs" />
     <Compile Include="frmReturnDisk\DiskReturnPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

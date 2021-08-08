@@ -54,6 +54,7 @@
     <Compile Include="Disks\DiskToCheckLateCharge.cs" />
     <Compile Include="Disks\Disk_Title.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Titles\TitleToReserveDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

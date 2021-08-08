@@ -163,6 +163,7 @@
     <Content Include="Images\cancel.png" />
     <Content Include="Images\checkCharge.png" />
     <Content Include="Images\close.png" />
+    <Content Include="Images\icon404.png" />
     <Content Include="Images\iconNotice.png" />
     <Content Include="Images\iconSales.png" />
     <Content Include="Images\logo3.jpg" />
@@ -186,9 +187,7 @@
       <Name>Presenters</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reg\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
