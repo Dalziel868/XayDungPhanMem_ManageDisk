@@ -62,13 +62,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DTO\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTOs.csproj">
       <Project>{b27225e4-a708-48f3-92ac-1a35eb6b6700}</Project>
-      <Name>DTO</Name>
+      <Name>DTOs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IViews_Presenters\IViews_Presenters.csproj">
+    <ProjectReference Include="..\IViews_Presenters\IViews.csproj">
       <Project>{1d2a7246-831c-4e2a-959c-58ad3bd83d9a}</Project>
-      <Name>IViews_Presenters</Name>
+      <Name>IViews</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{e6a5e492-5b18-440a-8cb9-31075e9bdc41}</Project>
