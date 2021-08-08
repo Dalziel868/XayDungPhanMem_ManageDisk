@@ -32,3 +32,4 @@ D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\GUIs.cspro
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\GUIs.csproj.CopyComplete
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.exe
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.pdb
+D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.Views.Disks.frmReserveDisk.resources

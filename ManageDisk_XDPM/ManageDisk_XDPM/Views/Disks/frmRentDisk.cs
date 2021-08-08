@@ -203,7 +203,7 @@ namespace ManageDisk_XDPM.Disks
             if(diskForRent!=null)
                 addDiskToListView(diskForRent);
             else
-                MessageBox.Show("ID đĩa không hợp lệ, kiểm tra lại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("ID đĩa không hợp lệ, hoặc đĩa hiện không có sẵn để thuê", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             txtDiskID.Clear();
             txtDiskID.Focus();

@@ -8,6 +8,7 @@
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
+    using System.Data.SqlClient;
     using System.Linq;
 
     /// <summary>
@@ -58,22 +59,45 @@
         /// <returns>The <see cref="DiskForRent"/>.</returns>
         public DiskForRent GetDiskToRent()
         {
-            if(!string.IsNullOrEmpty(_view.DiskID))
+            if (!string.IsNullOrEmpty(_view.DiskID))
             {
+                //int diskId = int.Parse(_view.DiskID);
+                //var diskData = (from d in _context.C_Disk
+                //                join c in _context.Categories
+                //                on d.CategoryId equals c.Id
+                //                where d.C_Status.Equals("onshelf") && d.Id == diskId
+                //                select new DiskForRent
+                //                {
+                //                    Id = d.Id,
+                //                    Name = d.Name,
+                //                    CategoryName = c.Name,
+                //                    UnitPrice = c.UnitPrice,
+                //                    RentTime = c.RentTime
+                //                }).AsNoTracking().FirstOrDefault();
+                //return diskData;
                 int diskId = int.Parse(_view.DiskID);
-                var diskData = (from d in _context.C_Disk
-                                join c in _context.Categories
-                                on d.CategoryId equals c.Id
-                                where d.C_Status.Equals("onshelf") && d.Id == diskId
-                                select new DiskForRent
-                                {
-                                    Id = d.Id,
-                                    Name = d.Name,
-                                    CategoryName = c.Name,
-                                    UnitPrice = c.UnitPrice,
-                                    RentTime = c.RentTime
-                                }).AsNoTracking().FirstOrDefault();
-                return diskData;
+                int customerID = _view.CustomerID;
+
+                object[] sqlParams =
+                {
+                    new SqlParameter("@cusId",customerID),
+                    new SqlParameter("@diskId",diskId)
+                };
+
+
+
+                var result = _context.Database.SqlQuery<DiskForRent>("GetDiskToRent @cusId, @diskId", sqlParams).SingleOrDefault();
+                
+                if(result==null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return result;
+                }
+
+
             }
             return null;
             
@@ -88,7 +112,7 @@
         {
 
             var idDisks = (from d in _context.C_Disk
-                           where d.C_Status.Equals("onshelf")
+                           where d.C_Status.Equals("onshelf") || d.C_Status.Equals("onhold")
                            select d.Id.ToString()
                             ).AsNoTracking().ToList();
 
