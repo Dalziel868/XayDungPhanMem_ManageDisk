@@ -41,13 +41,13 @@ namespace ManageDisk_XDPM.Disks
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.txtDiskID = new System.Windows.Forms.TextBox();
+            this.btnClearList = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtIdCustomer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblInfor = new System.Windows.Forms.Label();
             this.btnFinish = new System.Windows.Forms.Button();
-            this.btnClearList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -171,6 +171,23 @@ namespace ManageDisk_XDPM.Disks
             this.txtDiskID.Name = "txtDiskID";
             this.txtDiskID.Size = new System.Drawing.Size(323, 32);
             this.txtDiskID.TabIndex = 4;
+            this.txtDiskID.Leave += new System.EventHandler(this.txtDiskID_Leave);
+            // 
+            // btnClearList
+            // 
+            this.btnClearList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClearList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClearList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearList.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearList.ForeColor = System.Drawing.Color.White;
+            this.btnClearList.Location = new System.Drawing.Point(911, 140);
+            this.btnClearList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearList.Name = "btnClearList";
+            this.btnClearList.Size = new System.Drawing.Size(111, 45);
+            this.btnClearList.TabIndex = 7;
+            this.btnClearList.Text = "Clear List";
+            this.btnClearList.UseVisualStyleBackColor = false;
+            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
             // 
             // btnAdd
             // 
@@ -247,22 +264,6 @@ namespace ManageDisk_XDPM.Disks
             this.btnFinish.Text = "Thanh Toán";
             this.btnFinish.UseVisualStyleBackColor = false;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
-            // 
-            // btnClearList
-            // 
-            this.btnClearList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClearList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnClearList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearList.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearList.ForeColor = System.Drawing.Color.White;
-            this.btnClearList.Location = new System.Drawing.Point(911, 140);
-            this.btnClearList.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClearList.Name = "btnClearList";
-            this.btnClearList.Size = new System.Drawing.Size(111, 45);
-            this.btnClearList.TabIndex = 7;
-            this.btnClearList.Text = "Clear List";
-            this.btnClearList.UseVisualStyleBackColor = false;
-            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
             // 
             // frmRentDisk
             // 

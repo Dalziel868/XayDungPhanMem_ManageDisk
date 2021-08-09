@@ -1,6 +1,6 @@
 ﻿using DTO.Customers;
 using IViews_Presenters;
-
+using ManageDisk_XDPM.RegexExpression;
 using Presenters;
 using System;
 using System.Collections.Generic;
@@ -22,10 +22,7 @@ namespace ManageDisk_XDPM.Customers
         public frmAddCustomer()
         {
             InitializeComponent();
-            if(!ThemeColor.PrimaryColor.Name.Equals("0"))
-            {
-                LoadTheme();
-            }
+            
             _cuspresenter = new CustomerForCreatePresenter(this);
           
 
@@ -125,6 +122,26 @@ namespace ManageDisk_XDPM.Customers
                 
 
            
+        }
+
+        private void frmAddCustomer_Load(object sender, EventArgs e)
+        {
+            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
+            {
+                LoadTheme();
+            }
+        }
+
+        private void txtphone_Leave(object sender, EventArgs e)
+        {
+
+            bool regex = RegularExpression.isPhone(txtphone.Text);
+            if(regex==false)
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng", "SAI ĐỊNH DẠNG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtphone.SelectAll();
+                txtphone.Focus();
+            }
         }
     }
 }

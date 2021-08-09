@@ -2,6 +2,7 @@
 {
     using DTO.Titles;
     using IViews_Presenters.frmReserveDisk;
+    using ManageDisk_XDPM.RegexExpression;
     using Presenters.frmReserveDisk;
     using System.Collections.Generic;
     using System.Drawing;
@@ -192,6 +193,17 @@
         private void lstvtitleReserved_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             lstvtitleReserved.Items.RemoveAt(lstvtitleReserved.SelectedIndices[0]);
+        }
+
+        private void txtCustomerId_Leave(object sender, System.EventArgs e)
+        {
+            bool regexNumber = RegularExpression.isNumber(txtCustomerId.Text);
+            if(!regexNumber)
+            {
+                MessageBox.Show("ID Khách Hàng không hợp lệ", "SAI ĐỊNH DẠNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCustomerId.SelectAll();
+                txtCustomerId.Focus();
+            }
         }
     }
 }

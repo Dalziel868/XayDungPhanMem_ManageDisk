@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using DTO.Customers;
 using DTO.Disks;
 using ManageDisk_XDPM.Views.Charge;
+using ManageDisk_XDPM.RegexExpression;
 
 namespace ManageDisk_XDPM.Disks
 {
@@ -24,10 +25,7 @@ namespace ManageDisk_XDPM.Disks
         public frmRentDisk()
         {
             InitializeComponent();
-            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
-            {
-                LoadTheme();
-            }
+           
             _present = new CustomerForRentDiskPresenter(this);
         }
         //private void LoadIntoListBox()
@@ -104,6 +102,8 @@ namespace ManageDisk_XDPM.Disks
         public int CustomerID {
             get
             {
+                if (string.IsNullOrEmpty(txtIdCustomer.Text))
+                    return -1;
                 return int.Parse(txtIdCustomer.Text);
             }
             set
@@ -115,6 +115,7 @@ namespace ManageDisk_XDPM.Disks
         public string DiskID {
             get
             {
+               
                 return txtDiskID.Text;
             }
            
@@ -153,6 +154,10 @@ namespace ManageDisk_XDPM.Disks
 
         private void frmRentDisk_Load(object sender, EventArgs e)
         {
+            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
+            {
+                LoadTheme();
+            }
             listId = _present.GetAllIdOfDiskToSelect();
             AutoCompleteTextBox(listId);
             
@@ -211,18 +216,24 @@ namespace ManageDisk_XDPM.Disks
 
         private void txtIdCustomer_Leave(object sender, EventArgs e)
         {
-         
-            if (!txtIdCustomer.Text.Trim().Equals(""))
+            bool regexNumber = RegularExpression.isNumber(txtIdCustomer.Text);
+            if (regexNumber && !string.IsNullOrEmpty(txtIdCustomer.Text))
             {
                 CusTomerForRentDiskDto _cusDto = _present.GetCustomerToRentDisk();
                 if (_cusDto == null)
                 {
                     MessageBox.Show("ID Khách Hàng không hợp lệ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtIdCustomer.Focus();
                     txtIdCustomer.SelectAll();
+                    txtIdCustomer.Focus();
                 }  
                 else
                     lblInfor.Text = $"{_cusDto.FullName} - {_cusDto.Phone}";
+            }
+            else if(!regexNumber)
+            {
+                MessageBox.Show("ID Khách Hàng không hợp lệ", "SAI ĐỊNH DẠNG", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtIdCustomer.SelectAll();
+                txtIdCustomer.Focus();
             }
         }
 
@@ -298,6 +309,17 @@ namespace ManageDisk_XDPM.Disks
         private void btnClearList_Click(object sender, EventArgs e)
         {
             ClearItems();
+        }
+
+        private void txtDiskID_Leave(object sender, EventArgs e)
+        {
+            bool regexNumber = RegularExpression.isNumber(txtDiskID.Text);
+            if(regexNumber==false)
+            {
+                MessageBox.Show("ID của đĩa không đúng định dạng, kiểm tra lại", "SAI ĐỊNH DẠNG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtDiskID.SelectAll();
+                txtDiskID.Focus();
+            }    
         }
     }
 }

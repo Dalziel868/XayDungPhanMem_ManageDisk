@@ -1,5 +1,6 @@
 ﻿using DTO.Customers;
 using IViews_Presenters.Disks;
+using ManageDisk_XDPM.RegexExpression;
 using ManageDisk_XDPM.Views.Charge;
 using Presenters.Disk;
 using System;
@@ -41,10 +42,7 @@ namespace ManageDisk_XDPM.Views.Disks
         public frmReturnDisk()
         {
             InitializeComponent();
-            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
-            {
-                LoadTheme();
-            }
+           
             _presenter = new DiskReturnPresenter(this);
         }
         private void LoadTheme()
@@ -142,6 +140,25 @@ namespace ManageDisk_XDPM.Views.Disks
 
            
 
+        }
+
+        private void frmReturnDisk_Load(object sender, EventArgs e)
+        {
+            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
+            {
+                LoadTheme();
+            }
+        }
+
+        private void txtIdDisk_Leave(object sender, EventArgs e)
+        {
+            bool regexNumber = RegularExpression.isNumber(txtIdDisk.Text);
+            if (!regexNumber)
+            {
+                MessageBox.Show("ID của đĩa không đúng định dạng, kiểm tra lại", "SAI ĐỊNH DẠNG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtIdDisk.SelectAll();
+                txtIdDisk.Focus();
+            }
         }
     }
 }

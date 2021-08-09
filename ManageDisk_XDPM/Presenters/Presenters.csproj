@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillPresenter.cs" />
+    <Compile Include="frmCancelReservation\CancelReservationPresenter.cs" />
     <Compile Include="frmInfoLateCharge\InfoLateChargePresenter.cs" />
     <Compile Include="frmPayChargeLate\LateChargePresenter.cs" />
     <Compile Include="frmAddCustomer\CustomerForCreatePresenter.cs" />

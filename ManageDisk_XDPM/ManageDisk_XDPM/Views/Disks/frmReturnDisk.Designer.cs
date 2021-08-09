@@ -54,6 +54,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtIdDisk.Name = "txtIdDisk";
             this.txtIdDisk.Size = new System.Drawing.Size(609, 30);
             this.txtIdDisk.TabIndex = 1;
+            this.txtIdDisk.Leave += new System.EventHandler(this.txtIdDisk_Leave);
             // 
             // btnReturnDisk
             // 
@@ -94,6 +95,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReturnDisk";
             this.Text = "Trả Đĩa Đã Thuê";
+            this.Load += new System.EventHandler(this.frmReturnDisk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

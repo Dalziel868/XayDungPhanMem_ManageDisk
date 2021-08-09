@@ -131,6 +131,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtCustomerId.Name = "txtCustomerId";
             this.txtCustomerId.Size = new System.Drawing.Size(361, 26);
             this.txtCustomerId.TabIndex = 4;
+            this.txtCustomerId.Leave += new System.EventHandler(this.txtCustomerId_Leave);
             // 
             // label2
             // 

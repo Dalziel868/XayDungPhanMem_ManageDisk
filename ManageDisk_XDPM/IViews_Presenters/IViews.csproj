@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCancelReservation\ICancelReservation.cs" />
     <Compile Include="frmInfoLateCharge\IInfoCharge.cs" />
     <Compile Include="frmPayChargeLate\ICaculateLateCharge.cs" />
     <Compile Include="frmAddCustomer\IAddCustomer.cs" />

@@ -79,6 +79,8 @@ namespace ManageDisk_XDPM.Customers
             this.txtphone.Name = "txtphone";
             this.txtphone.Size = new System.Drawing.Size(323, 32);
             this.txtphone.TabIndex = 2;
+            this.txtphone.Text = "0";
+            this.txtphone.Leave += new System.EventHandler(this.txtphone_Leave);
             // 
             // pnlAddCustomer
             // 
@@ -212,6 +214,7 @@ namespace ManageDisk_XDPM.Customers
             this.Name = "frmAddCustomer";
             this.Text = "Tạo Mới Khách Hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmAddCustomer_Load);
             this.pnlAddCustomer.ResumeLayout(false);
             this.pnlAddCustomer.PerformLayout();
             this.ResumeLayout(false);

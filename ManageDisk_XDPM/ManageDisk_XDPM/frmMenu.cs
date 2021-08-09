@@ -143,7 +143,7 @@ namespace ManageDisk_XDPM
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender);
+            OpenChildForm(new frmCancelReservation(), sender);
         }
 
         private void btnCloseChildForm_Click(object sender, EventArgs e)

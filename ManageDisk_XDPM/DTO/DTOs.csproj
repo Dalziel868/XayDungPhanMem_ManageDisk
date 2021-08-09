@@ -50,6 +50,7 @@
     <Compile Include="Customers\CusTomerForRentDiskDto.cs" />
     <Compile Include="Customers\CustomerInfoLateCharge.cs" />
     <Compile Include="Customers\CustomerLateCharge.cs" />
+    <Compile Include="Customers\CustomerToCancelReservation.cs" />
     <Compile Include="Disks\DiskForRent.cs" />
     <Compile Include="Disks\DiskToCheckLateCharge.cs" />
     <Compile Include="Disks\Disk_Title.cs" />
