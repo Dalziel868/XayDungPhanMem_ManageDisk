@@ -66,7 +66,7 @@ namespace ManageDisk_XDPM.Customers
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(145, 51);
-            this.btnAdd.TabIndex = 1;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Submit";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -78,8 +78,7 @@ namespace ManageDisk_XDPM.Customers
             this.txtphone.Location = new System.Drawing.Point(326, 38);
             this.txtphone.Name = "txtphone";
             this.txtphone.Size = new System.Drawing.Size(323, 32);
-            this.txtphone.TabIndex = 2;
-            this.txtphone.Text = "0";
+            this.txtphone.TabIndex = 0;
             this.txtphone.Leave += new System.EventHandler(this.txtphone_Leave);
             // 
             // pnlAddCustomer
@@ -164,7 +163,7 @@ namespace ManageDisk_XDPM.Customers
             this.txtcity.Location = new System.Drawing.Point(326, 338);
             this.txtcity.Name = "txtcity";
             this.txtcity.Size = new System.Drawing.Size(323, 32);
-            this.txtcity.TabIndex = 2;
+            this.txtcity.TabIndex = 5;
             // 
             // txtdistrict
             // 
@@ -173,7 +172,7 @@ namespace ManageDisk_XDPM.Customers
             this.txtdistrict.Location = new System.Drawing.Point(326, 278);
             this.txtdistrict.Name = "txtdistrict";
             this.txtdistrict.Size = new System.Drawing.Size(323, 32);
-            this.txtdistrict.TabIndex = 2;
+            this.txtdistrict.TabIndex = 4;
             // 
             // txtward
             // 
@@ -182,7 +181,7 @@ namespace ManageDisk_XDPM.Customers
             this.txtward.Location = new System.Drawing.Point(326, 218);
             this.txtward.Name = "txtward";
             this.txtward.Size = new System.Drawing.Size(323, 32);
-            this.txtward.TabIndex = 2;
+            this.txtward.TabIndex = 3;
             // 
             // txthousenumber
             // 
@@ -200,7 +199,7 @@ namespace ManageDisk_XDPM.Customers
             this.txtfullname.Location = new System.Drawing.Point(326, 98);
             this.txtfullname.Name = "txtfullname";
             this.txtfullname.Size = new System.Drawing.Size(323, 32);
-            this.txtfullname.TabIndex = 2;
+            this.txtfullname.TabIndex = 1;
             // 
             // frmAddCustomer
             // 

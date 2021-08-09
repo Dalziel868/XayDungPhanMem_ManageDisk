@@ -9,6 +9,7 @@ namespace ManageDisk_XDPM.RegexExpression
 {
     public static class RegularExpression
     {
+        
         public static bool isNumber(string s)
         {
             Regex regex = new Regex("^[0-9]*$");

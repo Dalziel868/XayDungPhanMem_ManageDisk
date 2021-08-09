@@ -49,7 +49,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtTitleName.Location = new System.Drawing.Point(481, 88);
             this.txtTitleName.Name = "txtTitleName";
             this.txtTitleName.Size = new System.Drawing.Size(361, 132);
-            this.txtTitleName.TabIndex = 0;
+            this.txtTitleName.TabIndex = 1;
             this.txtTitleName.Text = "";
             // 
             // label1
@@ -104,7 +104,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.btnSearch.Location = new System.Drawing.Point(880, 127);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(103, 49);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -130,7 +130,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtCustomerId.Location = new System.Drawing.Point(481, 36);
             this.txtCustomerId.Name = "txtCustomerId";
             this.txtCustomerId.Size = new System.Drawing.Size(361, 26);
-            this.txtCustomerId.TabIndex = 4;
+            this.txtCustomerId.TabIndex = 0;
             this.txtCustomerId.Leave += new System.EventHandler(this.txtCustomerId_Leave);
             // 
             // label2

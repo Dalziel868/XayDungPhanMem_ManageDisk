@@ -46,6 +46,7 @@
     <Compile Include="Charges\ChargeToPay.cs" />
     <Compile Include="Charges\InforChargeToPay.cs" />
     <Compile Include="Charges\InforToCaculateLateCharge.cs" />
+    <Compile Include="Charges\LateChargeDto.cs" />
     <Compile Include="Customers\CustomerForCreateDto.cs" />
     <Compile Include="Customers\CusTomerForRentDiskDto.cs" />
     <Compile Include="Customers\CustomerInfoLateCharge.cs" />

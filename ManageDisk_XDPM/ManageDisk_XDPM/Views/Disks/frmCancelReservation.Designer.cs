@@ -110,7 +110,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.cboListReservation.Location = new System.Drawing.Point(481, 208);
             this.cboListReservation.Name = "cboListReservation";
             this.cboListReservation.Size = new System.Drawing.Size(423, 33);
-            this.cboListReservation.TabIndex = 3;
+            this.cboListReservation.TabIndex = 1;
             // 
             // label6
             // 
@@ -130,7 +130,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.btnCancel.Location = new System.Drawing.Point(615, 302);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(121, 77);
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Xóa Đặt Đĩa";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

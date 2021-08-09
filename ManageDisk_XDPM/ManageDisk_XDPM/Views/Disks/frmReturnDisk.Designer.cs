@@ -53,7 +53,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtIdDisk.Location = new System.Drawing.Point(341, 88);
             this.txtIdDisk.Name = "txtIdDisk";
             this.txtIdDisk.Size = new System.Drawing.Size(609, 30);
-            this.txtIdDisk.TabIndex = 1;
+            this.txtIdDisk.TabIndex = 0;
             this.txtIdDisk.Leave += new System.EventHandler(this.txtIdDisk_Leave);
             // 
             // btnReturnDisk
@@ -66,7 +66,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.btnReturnDisk.Location = new System.Drawing.Point(591, 147);
             this.btnReturnDisk.Name = "btnReturnDisk";
             this.btnReturnDisk.Size = new System.Drawing.Size(96, 49);
-            this.btnReturnDisk.TabIndex = 2;
+            this.btnReturnDisk.TabIndex = 1;
             this.btnReturnDisk.Text = "Trả Đĩa";
             this.btnReturnDisk.UseVisualStyleBackColor = true;
             this.btnReturnDisk.Click += new System.EventHandler(this.btnReturnDisk_Click);

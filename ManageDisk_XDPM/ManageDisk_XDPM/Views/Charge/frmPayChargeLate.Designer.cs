@@ -69,7 +69,7 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -81,6 +81,7 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblFeeToRent);
@@ -91,7 +92,7 @@ namespace ManageDisk_XDPM.Views.Charge
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 71);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -103,23 +104,25 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 97);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(65, 95);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(82, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Địa Chỉ:";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(751, 97);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 20);
+            this.label5.Size = new System.Drawing.Size(186, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Tiền Thuê Lần Này:";
             // 
@@ -127,11 +130,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lblFeeToRent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFeeToRent.AutoSize = true;
-            this.lblFeeToRent.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeeToRent.Location = new System.Drawing.Point(914, 93);
+            this.lblFeeToRent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeeToRent.Location = new System.Drawing.Point(933, 97);
             this.lblFeeToRent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeeToRent.Name = "lblFeeToRent";
-            this.lblFeeToRent.Size = new System.Drawing.Size(66, 24);
+            this.lblFeeToRent.Size = new System.Drawing.Size(70, 25);
             this.lblFeeToRent.TabIndex = 1;
             this.lblFeeToRent.Text = "label3";
             // 
@@ -139,11 +142,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lbladdress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbladdress.AutoSize = true;
-            this.lbladdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladdress.Location = new System.Drawing.Point(142, 93);
+            this.lbladdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladdress.Location = new System.Drawing.Point(144, 94);
             this.lbladdress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbladdress.Name = "lbladdress";
-            this.lbladdress.Size = new System.Drawing.Size(60, 24);
+            this.lbladdress.Size = new System.Drawing.Size(70, 26);
             this.lbladdress.TabIndex = 1;
             this.lbladdress.Text = "label3";
             // 
@@ -151,11 +154,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lblIDCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIDCustomer.AutoSize = true;
-            this.lblIDCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDCustomer.Location = new System.Drawing.Point(105, 38);
+            this.lblIDCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDCustomer.Location = new System.Drawing.Point(99, 42);
             this.lblIDCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDCustomer.Name = "lblIDCustomer";
-            this.lblIDCustomer.Size = new System.Drawing.Size(60, 24);
+            this.lblIDCustomer.Size = new System.Drawing.Size(70, 26);
             this.lblIDCustomer.TabIndex = 1;
             this.lblIDCustomer.Text = "label3";
             // 
@@ -163,11 +166,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(1029, 38);
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.Location = new System.Drawing.Point(998, 39);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(50, 24);
+            this.lblPhone.Size = new System.Drawing.Size(58, 26);
             this.lblPhone.TabIndex = 0;
             this.lblPhone.Text = "label";
             // 
@@ -175,11 +178,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(461, 39);
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(473, 41);
             this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(50, 24);
+            this.lblFullName.Size = new System.Drawing.Size(58, 26);
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "label";
             // 
@@ -187,11 +190,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(902, 41);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(860, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 20);
+            this.label4.Size = new System.Drawing.Size(143, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Số Điện Thoại:";
             // 
@@ -199,11 +202,11 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(384, 41);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(392, 43);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(83, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ Tên:";
             // 
@@ -211,16 +214,17 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 41);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 42);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 20);
+            this.label2.Size = new System.Drawing.Size(37, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.chkSelectAll);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.lblTotalMoney);
@@ -228,7 +232,6 @@ namespace ManageDisk_XDPM.Views.Charge
             this.groupBox2.Controls.Add(this.btnChiTietPhiTre);
             this.groupBox2.Controls.Add(this.btnPay);
             this.groupBox2.Controls.Add(this.lstvLateCharge);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 214);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -240,11 +243,13 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // chkSelectAll
             // 
+            this.chkSelectAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkSelectAll.AutoSize = true;
+            this.chkSelectAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSelectAll.Location = new System.Drawing.Point(125, 54);
             this.chkSelectAll.Margin = new System.Windows.Forms.Padding(4);
             this.chkSelectAll.Name = "chkSelectAll";
-            this.chkSelectAll.Size = new System.Drawing.Size(125, 24);
+            this.chkSelectAll.Size = new System.Drawing.Size(147, 29);
             this.chkSelectAll.TabIndex = 14;
             this.chkSelectAll.Text = "Chọn Tất Cả";
             this.chkSelectAll.UseVisualStyleBackColor = true;
@@ -252,11 +257,13 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(787, 212);
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(751, 255);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(434, 117);
+            this.label6.Size = new System.Drawing.Size(476, 207);
             this.label6.TabIndex = 13;
             this.label6.Text = "Bảng Tính Phí Trễ:\r\n1. Trễ từ <5 ngày:  Chịu 20% đơn giá đĩa\r\n2. Trễ từ >=5 và <7" +
     " ngày: Chịu 30% đơn giá đĩa\r\n3. Trễ từ >=7 và <10 ngày: Chịu 50% đơn giá đĩa\r\n4." +
@@ -267,7 +274,7 @@ namespace ManageDisk_XDPM.Views.Charge
             this.lblTotalMoney.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotalMoney.AutoSize = true;
             this.lblTotalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalMoney.Location = new System.Drawing.Point(557, 53);
+            this.lblTotalMoney.Location = new System.Drawing.Point(596, 58);
             this.lblTotalMoney.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalMoney.Name = "lblTotalMoney";
             this.lblTotalMoney.Size = new System.Drawing.Size(24, 25);
@@ -278,20 +285,21 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             this.lbltamtinh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbltamtinh.AutoSize = true;
-            this.lbltamtinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltamtinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltamtinh.ForeColor = System.Drawing.Color.Black;
-            this.lbltamtinh.Location = new System.Drawing.Point(307, 54);
+            this.lbltamtinh.Location = new System.Drawing.Point(336, 57);
             this.lbltamtinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltamtinh.Name = "lbltamtinh";
-            this.lbltamtinh.Size = new System.Drawing.Size(251, 24);
+            this.lbltamtinh.Size = new System.Drawing.Size(263, 25);
             this.lbltamtinh.TabIndex = 11;
             this.lbltamtinh.Text = "Tổng Tiền Cần Thanh Toán:";
             // 
             // btnChiTietPhiTre
             // 
+            this.btnChiTietPhiTre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChiTietPhiTre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnChiTietPhiTre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTietPhiTre.Location = new System.Drawing.Point(791, 366);
+            this.btnChiTietPhiTre.Location = new System.Drawing.Point(1050, 117);
             this.btnChiTietPhiTre.Margin = new System.Windows.Forms.Padding(4);
             this.btnChiTietPhiTre.Name = "btnChiTietPhiTre";
             this.btnChiTietPhiTre.Size = new System.Drawing.Size(132, 66);
@@ -302,9 +310,10 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // btnPay
             // 
+            this.btnPay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Location = new System.Drawing.Point(791, 86);
+            this.btnPay.Location = new System.Drawing.Point(774, 117);
             this.btnPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(132, 66);
@@ -315,6 +324,7 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // lstvLateCharge
             // 
+            this.lstvLateCharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lstvLateCharge.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstvLateCharge.CheckBoxes = true;
             this.lstvLateCharge.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -344,8 +354,7 @@ namespace ManageDisk_XDPM.Views.Charge
             // 
             // frmPayChargeLate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1299, 701);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -353,9 +362,12 @@ namespace ManageDisk_XDPM.Views.Charge
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1317, 748);
+            this.MinimumSize = new System.Drawing.Size(1317, 748);
             this.Name = "frmPayChargeLate";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh Toán Phí Trễ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPayChargeLate_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

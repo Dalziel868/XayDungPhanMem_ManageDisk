@@ -170,7 +170,7 @@ namespace ManageDisk_XDPM.Disks
             this.txtDiskID.Location = new System.Drawing.Point(359, 40);
             this.txtDiskID.Name = "txtDiskID";
             this.txtDiskID.Size = new System.Drawing.Size(323, 32);
-            this.txtDiskID.TabIndex = 4;
+            this.txtDiskID.TabIndex = 1;
             this.txtDiskID.Leave += new System.EventHandler(this.txtDiskID_Leave);
             // 
             // btnClearList
@@ -184,7 +184,7 @@ namespace ManageDisk_XDPM.Disks
             this.btnClearList.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearList.Name = "btnClearList";
             this.btnClearList.Size = new System.Drawing.Size(111, 45);
-            this.btnClearList.TabIndex = 7;
+            this.btnClearList.TabIndex = 3;
             this.btnClearList.Text = "Clear List";
             this.btnClearList.UseVisualStyleBackColor = false;
             this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
@@ -199,7 +199,7 @@ namespace ManageDisk_XDPM.Disks
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 45);
-            this.btnAdd.TabIndex = 7;
+            this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Đặt Đĩa";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -225,7 +225,7 @@ namespace ManageDisk_XDPM.Disks
             this.txtIdCustomer.Location = new System.Drawing.Point(359, 53);
             this.txtIdCustomer.Name = "txtIdCustomer";
             this.txtIdCustomer.Size = new System.Drawing.Size(323, 32);
-            this.txtIdCustomer.TabIndex = 4;
+            this.txtIdCustomer.TabIndex = 0;
             this.txtIdCustomer.Leave += new System.EventHandler(this.txtIdCustomer_Leave);
             // 
             // label1

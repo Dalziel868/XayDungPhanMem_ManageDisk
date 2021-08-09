@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManageDisk_XDPM.Customers;
 using ManageDisk_XDPM.Disks;
+using ManageDisk_XDPM.Views.Charge;
 using ManageDisk_XDPM.Views.Disks;
 
 namespace ManageDisk_XDPM
@@ -133,7 +134,7 @@ namespace ManageDisk_XDPM
 
         private void btnCheckCharge_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender);
+            OpenChildForm(new frmSearchLateCharge(), sender);
         }
 
         private void btnReservations_Click(object sender, EventArgs e)
