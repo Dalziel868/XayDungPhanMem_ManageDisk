@@ -3,6 +3,7 @@ using IViews_Presenters.frmReserveDisk;
 using Models.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,9 +33,25 @@ namespace Presenters.frmReserveDisk
         }
         public bool ReserveDisks()
         {
-            List<int> listIdOfDisk = _view.ListTitleID;
-            int titleId = _view.CustomerID;
-            return true;
+            if (_view.ListTitleID.Count == 0 || _view.CustomerID == 0)
+                return false;
+            List<int> listIdOfDisk = _view.ListTitleID; 
+            int cusId = _view.CustomerID;
+            foreach (var item in listIdOfDisk)
+            {
+                _context.MessageOnHolds.Add(new MessageOnHold() { TitleID = item, CustomerID = cusId, BookTime = DateTime.Now });
+            }
+            try
+            {
+                _context.SaveChanges();
+                return true;
+            }
+            catch (DbUpdateException)
+            {
+
+                return false;
+            }
+            
         }
     }
 }

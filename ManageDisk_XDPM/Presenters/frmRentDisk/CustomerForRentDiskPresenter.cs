@@ -8,6 +8,7 @@
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
     using System.Data.SqlClient;
     using System.Linq;
 
@@ -196,7 +197,7 @@
                     _context.SaveChanges();
                     return true;
                 }
-                catch (Exception)
+                catch (DbUpdateException)
                 {
 
                     return false;

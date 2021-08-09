@@ -136,7 +136,25 @@
 
         private void btnReserveDisk_Click(object sender, System.EventArgs e)
         {
-
+            if(string.IsNullOrEmpty(txtCustomerId.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập ID khách hàng!", "NHẬP THIẾU DỮ LIỆU", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            bool reserveTitle = _presenter.ReserveDisks();
+            if (reserveTitle)
+            {
+                ShowPopupNotifi("THÀNH CÔNG", "Đã đặt tiêu đề cho khách hàng thành công", Properties.Resources.iconNotice);
+               
+                txtTitleName.Clear();
+                lstvListTitle.Items.Clear();
+                lstvtitleReserved.Items.Clear();
+                txtCustomerId.SelectAll();
+                txtCustomerId.Focus();
+                
+            }      
+            else
+                MessageBox.Show("Có thể chưa chọn tiêu đề để thuê, kiểm tra lại!", "NHẬP THIẾU DỮ LIỆU", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         

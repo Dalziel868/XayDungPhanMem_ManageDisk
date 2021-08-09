@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using DTO.Charges;
+using System.Data.Entity.Infrastructure;
 
 namespace Presenters.Charges
 {
@@ -62,7 +63,7 @@ namespace Presenters.Charges
                 _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (DbUpdateException)
             {
 
                 return false;

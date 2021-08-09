@@ -5,6 +5,7 @@ using Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,7 +49,7 @@ namespace Presenters.Disk
                 _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (DbUpdateException)
             {
 
                 return false;
@@ -203,7 +204,7 @@ namespace Presenters.Disk
                 _context.SaveChanges();
                 return AutoAddLateCharge(billDetail.RowID);
             }
-            catch (Exception)
+            catch (DbUpdateException)
             {
 
                 return -1;
