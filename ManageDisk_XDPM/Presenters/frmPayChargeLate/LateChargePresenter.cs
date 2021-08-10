@@ -15,7 +15,7 @@ namespace Presenters.Charges
     public class LateChargePresenter
     {
         private readonly ICaculateLateCharge _view;
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         
         public LateChargePresenter(ICaculateLateCharge view)
         {

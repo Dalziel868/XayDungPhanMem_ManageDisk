@@ -17,8 +17,8 @@ namespace ManageDisk_XDPM.Customers
 {
     public partial class frmAddCustomer : Form,IAddCustomer
     {
-        private CustomerForCreateDto _customerDto;
-        private CustomerForCreatePresenter _cuspresenter;
+        private  CustomerForCreateDto _customerDto;
+        private readonly CustomerForCreatePresenter _cuspresenter;
         public frmAddCustomer()
         {
             InitializeComponent();

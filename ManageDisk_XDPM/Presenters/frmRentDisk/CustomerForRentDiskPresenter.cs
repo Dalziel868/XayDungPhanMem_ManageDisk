@@ -20,12 +20,12 @@
         /// <summary>
         /// Defines the _context.
         /// </summary>
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
 
         /// <summary>
         /// Defines the _view.
         /// </summary>
-        private ICustomerForRentDisk _view;
+        private readonly ICustomerForRentDisk _view;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerForRentDiskPresenter"/> class.
@@ -187,10 +187,23 @@
                     disk.C_Status = "rented";
                     _context.C_Disk.Attach(disk);
                     _context.Entry(disk).Property(d => d.C_Status).IsModified = true;
-                    
+
+                //bo sung delete customer in messsageonhold
+                var messageOnhold =( from m in _context.MessageOnHolds
+                                        join t in _context.Titles
+                                        on m.TitleID equals t.Id
+                                        where t.C_Disk.Any(td => td.Id == idDisk) && m.CustomerID == customerID
+                                        select m).FirstOrDefault();
+                if (messageOnhold != null)
+                    _context.MessageOnHolds.Remove(messageOnhold);
+
+
                 }
                 _context.Bills.Add(bill);
-            
+
+               
+
+
                 try
                 {
                     

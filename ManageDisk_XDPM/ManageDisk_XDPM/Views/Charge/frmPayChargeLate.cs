@@ -18,7 +18,7 @@ namespace ManageDisk_XDPM.Views.Charge
     {
         private readonly Decimal _totalMoney=0;
         private readonly int _idCustomer;
-        private LateChargePresenter _present;
+        private readonly LateChargePresenter _present;
         private decimal _lateCharge = 0;
         public int CustomerID
         {

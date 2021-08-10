@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillDetails\BillDetailForRemoveLateCharge.cs" />
     <Compile Include="BillDetails\BillDetailInfoLateCharge.cs" />
     <Compile Include="Charges\ChargeToPay.cs" />
     <Compile Include="Charges\InforChargeToPay.cs" />

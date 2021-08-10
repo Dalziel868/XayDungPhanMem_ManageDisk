@@ -12,7 +12,7 @@ namespace Presenters.frmReserveDisk
 {
     public class ReserveDiskPresenter
     {
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         private readonly IReserveDisk _view;
         public ReserveDiskPresenter(IReserveDisk view)
         {

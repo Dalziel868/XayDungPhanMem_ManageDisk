@@ -14,7 +14,7 @@ namespace Presenters.frmCancelReservation
 {
     public class CancelReservationPresenter
     {
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         private readonly ICancelReservation _view;
         public CancelReservationPresenter(ICancelReservation view)
         {

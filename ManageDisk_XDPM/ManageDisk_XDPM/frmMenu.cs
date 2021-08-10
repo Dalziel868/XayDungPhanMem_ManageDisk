@@ -12,6 +12,7 @@ using ManageDisk_XDPM.Customers;
 using ManageDisk_XDPM.Disks;
 using ManageDisk_XDPM.Views.Charge;
 using ManageDisk_XDPM.Views.Disks;
+using ManageDisk_XDPM.Views.Manager;
 
 namespace ManageDisk_XDPM
 {
@@ -129,7 +130,7 @@ namespace ManageDisk_XDPM
 
         private void btnTitleInfo_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender);
+            OpenChildForm(new frmRemoveLateCharge(), sender);
         }
 
         private void btnCheckCharge_Click(object sender, EventArgs e)

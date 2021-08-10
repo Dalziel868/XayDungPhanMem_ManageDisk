@@ -19,7 +19,7 @@ namespace ManageDisk_XDPM.Views.Charge
     {
         private readonly int _customerID;
         private readonly decimal _totalLateCharge;
-        private InfoLateChargePresenter _presenter;
+        private readonly InfoLateChargePresenter _presenter;
         private int _diskID;
         public frmInfoLateCharge(int CustomerID,decimal totalLateCharge)
         {

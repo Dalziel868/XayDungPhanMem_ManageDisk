@@ -15,7 +15,7 @@ namespace ManageDisk_XDPM.Views.Charge
 {
     public partial class frmSearchLateCharge : Form, ISearchLateCharge
     {
-        private SearchLateChargePresenter _presenter;
+        private readonly SearchLateChargePresenter _presenter;
         public int CustomerID
         {
             get

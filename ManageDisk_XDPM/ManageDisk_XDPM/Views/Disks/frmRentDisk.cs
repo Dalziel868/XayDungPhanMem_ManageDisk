@@ -19,7 +19,7 @@ namespace ManageDisk_XDPM.Disks
     public partial class frmRentDisk : Form,ICustomerForRentDisk
     {
 
-        private CustomerForRentDiskPresenter _present;
+        private readonly CustomerForRentDiskPresenter _present;
         private List<string> listId;
         private Decimal totalMoney=0;
         public frmRentDisk()

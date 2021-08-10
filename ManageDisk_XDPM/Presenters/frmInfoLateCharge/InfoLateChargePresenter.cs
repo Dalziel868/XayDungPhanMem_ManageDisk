@@ -14,7 +14,7 @@ namespace Presenters.frmInfoLateCharge
 {
     public class InfoLateChargePresenter
     {
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         private readonly IInfoCharge _view;
         public InfoLateChargePresenter(IInfoCharge view)
         {

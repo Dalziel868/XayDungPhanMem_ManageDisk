@@ -37,7 +37,7 @@ namespace ManageDisk_XDPM.Views.Disks
             
         }
 
-        private DiskReturnPresenter _presenter;
+        private readonly DiskReturnPresenter _presenter;
         private int _listOrderOnhold = 0;
         public frmReturnDisk()
         {

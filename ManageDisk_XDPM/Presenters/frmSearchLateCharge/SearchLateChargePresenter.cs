@@ -11,7 +11,7 @@ namespace Presenters.frmSearchLateCharge
 {
     public class SearchLateChargePresenter
     {
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         private readonly ISearchLateCharge _view;
         public SearchLateChargePresenter(ISearchLateCharge view)
         {

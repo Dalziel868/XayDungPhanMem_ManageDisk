@@ -18,7 +18,7 @@ namespace ManageDisk_XDPM.Views.Disks
 {
     public partial class frmCancelReservation : Form, ICancelReservation
     {
-        private CancelReservationPresenter _presenter;
+        private readonly CancelReservationPresenter _presenter;
         public frmCancelReservation()
         {
             InitializeComponent();

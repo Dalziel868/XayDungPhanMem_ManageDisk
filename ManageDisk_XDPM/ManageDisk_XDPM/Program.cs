@@ -1,4 +1,5 @@
 ﻿using ManageDisk_XDPM.Views.Charge;
+using ManageDisk_XDPM.Views.Manager;
 using System;
 using System.Collections.Generic;
 using System.Linq;

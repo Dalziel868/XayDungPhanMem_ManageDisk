@@ -45,6 +45,7 @@
     <Compile Include="frmInfoLateCharge\IInfoCharge.cs" />
     <Compile Include="frmPayChargeLate\ICaculateLateCharge.cs" />
     <Compile Include="frmAddCustomer\IAddCustomer.cs" />
+    <Compile Include="frmRemoveLateCharge\IRemoveLateCharge.cs" />
     <Compile Include="frmRentDisk\ICustomerForRentDisk.cs" />
     <Compile Include="frmReserveDisk\IReserveDisk.cs" />
     <Compile Include="frmReturnDisk\IReturnDisk.cs" />

@@ -20,12 +20,12 @@
         /// <summary>
         /// Defines the _manageDb.
         /// </summary>
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
 
         /// <summary>
         /// Defines the _addCustomer.
         /// </summary>
-        private IAddCustomer _view;
+        private readonly IAddCustomer _view;
         
 
         /// <summary>

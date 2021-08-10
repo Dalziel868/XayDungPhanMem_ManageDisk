@@ -14,7 +14,7 @@ namespace Presenters.Disk
 {
     public class DiskReturnPresenter
     {
-        private ManageDisk _context;
+        private readonly ManageDisk _context;
         private readonly IReturnDisk _view;
         private Guid _rowIDBillDetail=Guid.Empty;
         private MessageOnHold _onHoldData;

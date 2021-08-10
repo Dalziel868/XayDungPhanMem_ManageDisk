@@ -15,7 +15,7 @@
     /// </summary>
     public partial class frmReserveDisk : Form, IReserveDisk
     {
-        private ReserveDiskPresenter _presenter;
+        private readonly ReserveDiskPresenter _presenter;
      
         /// <summary>
         /// Initializes a new instance of the <see cref="frmReserveDisk"/> class.
@@ -24,10 +24,7 @@
         {
             InitializeComponent();
             _presenter = new ReserveDiskPresenter(this);
-            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
-            {
-                LoadTheme();
-            }
+            
 
         }
 
@@ -186,8 +183,11 @@
 
         private void frmReserveDisk_Load(object sender, System.EventArgs e)
         {
-           
-           
+            if (!ThemeColor.PrimaryColor.Name.Equals("0"))
+            {
+                LoadTheme();
+            }
+
         }
 
         private void lstvtitleReserved_MouseDoubleClick(object sender, MouseEventArgs e)
