@@ -130,7 +130,7 @@ namespace ManageDisk_XDPM
 
         private void btnTitleInfo_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmRemoveLateCharge(), sender);
+            //OpenChildForm(new frmRemoveLateCharge(), sender);
         }
 
         private void btnCheckCharge_Click(object sender, EventArgs e)
