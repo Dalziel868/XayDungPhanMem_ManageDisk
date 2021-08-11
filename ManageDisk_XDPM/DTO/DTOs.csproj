@@ -54,9 +54,14 @@
     <Compile Include="Customers\CustomerInfoLateCharge.cs" />
     <Compile Include="Customers\CustomerLateCharge.cs" />
     <Compile Include="Customers\CustomerToCancelReservation.cs" />
+    <Compile Include="Disks\DiskDto.cs" />
     <Compile Include="Disks\DiskForRent.cs" />
+    <Compile Include="Disks\DiskOnHoldDto.cs" />
+    <Compile Include="Disks\DiskOnshelfDto.cs" />
+    <Compile Include="Disks\DiskRentedDto.cs" />
     <Compile Include="Disks\DiskToCheckLateCharge.cs" />
     <Compile Include="Disks\Disk_Title.cs" />
+    <Compile Include="Disks\ListDisk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Titles\TitleToReserveDto.cs" />
   </ItemGroup>

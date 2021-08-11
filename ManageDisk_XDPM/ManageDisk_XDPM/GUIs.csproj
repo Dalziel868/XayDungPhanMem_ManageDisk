@@ -135,6 +135,12 @@
     <Compile Include="Views\Manager\frmRemoveLateCharge.Designer.cs">
       <DependentUpon>frmRemoveLateCharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manager\frrtInsertDisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\frrtInsertDisk.Designer.cs">
+      <DependentUpon>frrtInsertDisk.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Charge\frmInfoLateCharge.resx">
       <DependentUpon>frmInfoLateCharge.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Manager\frmRemoveLateCharge.resx">
       <DependentUpon>frmRemoveLateCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manager\frrtInsertDisk.resx">
+      <DependentUpon>frrtInsertDisk.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

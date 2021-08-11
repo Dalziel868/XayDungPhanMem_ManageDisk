@@ -125,7 +125,7 @@ namespace ManageDisk_XDPM
 
         private void btnDiskStatusReport_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender);
+            OpenChildForm(new frmReportStatus(), sender);
         }
 
         private void btnTitleInfo_Click(object sender, EventArgs e)

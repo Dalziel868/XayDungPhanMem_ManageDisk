@@ -37,3 +37,4 @@ D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.Views.Charge.frmSearchLateCharge.resources
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.Views.Manager.frmRemoveLateCharge.resources
 D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.Views.Disks.frmReportStatus.resources
+D:\VSUALO\072021\Repository\ManageDisk_XDPM\ManageDisk_XDPM\obj\Debug\ManageDisk_XDPM.Views.Manager.frrtInsertDisk.resources

@@ -56,10 +56,12 @@
     <Compile Include="BillPresenter.cs" />
     <Compile Include="frmCancelReservation\CancelReservationPresenter.cs" />
     <Compile Include="frmInfoLateCharge\InfoLateChargePresenter.cs" />
+    <Compile Include="frmInsertDisk\InsertDiskPresenter.cs" />
     <Compile Include="frmPayChargeLate\LateChargePresenter.cs" />
     <Compile Include="frmAddCustomer\CustomerForCreatePresenter.cs" />
     <Compile Include="frmRemoveLateCharge\RemoveLateChargePresenter.cs" />
     <Compile Include="frmRentDisk\CustomerForRentDiskPresenter.cs" />
+    <Compile Include="frmReportStatus\ReportStatusDiskPresenter.cs" />
     <Compile Include="frmReserveDisk\ReserveDiskPresenter.cs" />
     <Compile Include="frmReturnDisk\DiskReturnPresenter.cs" />
     <Compile Include="frmSearchLateCharge\SearchLateChargePresenter.cs" />

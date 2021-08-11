@@ -43,10 +43,12 @@
   <ItemGroup>
     <Compile Include="frmCancelReservation\ICancelReservation.cs" />
     <Compile Include="frmInfoLateCharge\IInfoCharge.cs" />
+    <Compile Include="frmInsertDisk\IInsertDisk.cs" />
     <Compile Include="frmPayChargeLate\ICaculateLateCharge.cs" />
     <Compile Include="frmAddCustomer\IAddCustomer.cs" />
     <Compile Include="frmRemoveLateCharge\IRemoveLateCharge.cs" />
     <Compile Include="frmRentDisk\ICustomerForRentDisk.cs" />
+    <Compile Include="frmReportStatus\IReportStatus.cs" />
     <Compile Include="frmReserveDisk\IReserveDisk.cs" />
     <Compile Include="frmReturnDisk\IReturnDisk.cs" />
     <Compile Include="frmSearchLateCharge\ISearchLateCharge.cs" />
