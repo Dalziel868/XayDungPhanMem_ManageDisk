@@ -50,6 +50,7 @@
     <Compile Include="frmReserveDisk\IReserveDisk.cs" />
     <Compile Include="frmReturnDisk\IReturnDisk.cs" />
     <Compile Include="frmSearchLateCharge\ISearchLateCharge.cs" />
+    <Compile Include="frmUpdateCustomer\IUpdateCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

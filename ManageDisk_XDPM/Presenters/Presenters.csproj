@@ -63,6 +63,7 @@
     <Compile Include="frmReserveDisk\ReserveDiskPresenter.cs" />
     <Compile Include="frmReturnDisk\DiskReturnPresenter.cs" />
     <Compile Include="frmSearchLateCharge\SearchLateChargePresenter.cs" />
+    <Compile Include="frmUpdateCustomer\CustomerForUpdatePresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
