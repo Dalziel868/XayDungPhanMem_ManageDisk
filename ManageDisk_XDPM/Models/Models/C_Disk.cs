@@ -13,13 +13,9 @@ namespace Models.Models
         public C_Disk()
         {
             BillDetails = new HashSet<BillDetail>();
-            Titles = new HashSet<Title>();
         }
 
         public int Id { get; set; }
-
-        [StringLength(350)]
-        public string Name { get; set; }
 
         [Column("_Status")]
         [StringLength(15)]
@@ -27,12 +23,13 @@ namespace Models.Models
 
         public int? CategoryId { get; set; }
 
+        public int? TitleID { get; set; }
+
+        public virtual Title Title { get; set; }
+
         public virtual Category Category { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BillDetail> BillDetails { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Title> Titles { get; set; }
     }
 }

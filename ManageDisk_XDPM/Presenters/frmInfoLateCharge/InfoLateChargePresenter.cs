@@ -51,14 +51,13 @@ namespace Presenters.frmInfoLateCharge
                              on b.Id equals bd.BillID
                              join d in _context.C_Disk
                              on bd.DiskID equals d.Id
-                             where c.Id == customerID && bd.ReturnDate != null && bd.LateChargeID != null
+                             join t in _context.Titles
+                             on d.TitleID equals t.Id
+                             where c.Id == customerID  && bd.LateChargeID != null
                              select new Disk_Title
                              {
                                  DiskID=d.Id,
-                                 Name = d.Name,
-                                 TitleNames = (from t in _context.Titles
-                                               where t.C_Disk.Any(tc => tc.Id == d.Id)
-                                               select t.Name).ToList()
+                                 Name = t.Name,
 
                              };
             return diskTitles;
@@ -81,10 +80,12 @@ namespace Presenters.frmInfoLateCharge
                                  on bd.DiskID equals d.Id
                                  join ct in _context.Categories
                                  on d.CategoryId equals ct.Id
+                                 join t in _context.Titles
+                                 on d.TitleID equals t.Id
                                  where c.Id == customerID && d.Id == diskID
                                  select new BillDetailInfoLateCharge
                                  {
-                                     DiskName=d.Name,
+                                     DiskName=t.Name,
                                      DueDate=bd.DueDate,
                                      ReturnDate=bd.ReturnDate,
                                      UnitPrice=ct.UnitPrice??0,
@@ -116,10 +117,12 @@ namespace Presenters.frmInfoLateCharge
                                  on d.Id equals d2
                                  join ct in _context.Categories
                                  on d.CategoryId equals ct.Id
+                                 join t in _context.Titles
+                                 on d.TitleID equals t.Id
                                  where c.Id == customerID
                                  select new BillDetailInfoLateCharge
                                  {
-                                     DiskName = d.Name,
+                                     DiskName = t.Name,
                                      DueDate = bd.DueDate,
                                      ReturnDate = bd.ReturnDate,
                                      UnitPrice = ct.UnitPrice ?? 0,

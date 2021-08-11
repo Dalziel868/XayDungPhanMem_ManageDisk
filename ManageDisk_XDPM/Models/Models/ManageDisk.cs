@@ -29,11 +29,6 @@ namespace Models.Models
                 .HasForeignKey(e => e.DiskID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<C_Disk>()
-                .HasMany(e => e.Titles)
-                .WithMany(e => e.C_Disk)
-                .Map(m => m.ToTable("Disk_Title").MapLeftKey("DiskID").MapRightKey("TitleID"));
-
             modelBuilder.Entity<Bill>()
                 .HasMany(e => e.BillDetails)
                 .WithRequired(e => e.Bill)

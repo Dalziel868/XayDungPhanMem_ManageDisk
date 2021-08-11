@@ -13,7 +13,7 @@ namespace DTO.Disks
 
         [StringLength(350)]
         public string Name { get; set; }
-        public ICollection<string> TitleNames { get; set; }
+      
 
     }
 }

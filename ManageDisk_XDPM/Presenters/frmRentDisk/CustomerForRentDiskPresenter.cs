@@ -55,7 +55,7 @@
 
         /// <summary>
         /// The GetDiskToRent.
-        /// Lấy đĩa dựa vào mã đĩa ở UI
+        /// Lấy đĩa dựa vào mã đĩa ở UI.
         /// </summary>
         /// <returns>The <see cref="DiskForRent"/>.</returns>
         public DiskForRent GetDiskToRent()
@@ -88,8 +88,8 @@
 
 
                 var result = _context.Database.SqlQuery<DiskForRent>("GetDiskToRent @cusId, @diskId", sqlParams).SingleOrDefault();
-                
-                if(result==null)
+
+                if (result == null)
                 {
                     return null;
                 }
@@ -101,12 +101,11 @@
 
             }
             return null;
-            
         }
 
         /// <summary>
         /// The GetAllIdOfDiskToSelect.
-        /// Lấy danh sách mã đĩa onshelf để thực hiện autocomplete ở UI
+        /// Lấy danh sách mã đĩa onshelf để thực hiện autocomplete ở UI.
         /// </summary>
         /// <returns>The <see cref="List{string}"/>.</returns>
         public List<string> GetAllIdOfDiskToSelect()
@@ -119,9 +118,14 @@
 
             return idDisks;
         }
+
         /**
          * Chức năng dùng để tính tổng phí trễ nếu có của khách hàng thuê đĩa
          */
+        /// <summary>
+        /// The GetTotalLateCharge.
+        /// </summary>
+        /// <returns>The <see cref="decimal"/>.</returns>
         public decimal GetTotalLateCharge()
         {
             var lateCharge = from c in _context.Customers
@@ -135,14 +139,14 @@
                              on bd.DiskID equals d.Id
                              join ct in _context.Categories
                              on d.CategoryId equals ct.Id
-                             where c.Id == _view.CustomerID && bd.ReturnDate!=null && bd.LateChargeID!=null
+                             where c.Id == _view.CustomerID && bd.LateChargeID != null
                              select new DiskToCheckLateCharge
                              {
-                                 ChargePercent=lc.ChargePercent,
-                                 UnitPrice=ct.UnitPrice
+                                 ChargePercent = lc.ChargePercent,
+                                 UnitPrice = ct.UnitPrice
                              };
             decimal sumOfLateCharge = 0;
-            if(lateCharge.Count()>0)
+            if (lateCharge.Count() > 0)
             {
                 foreach (var item in lateCharge)
                 {
@@ -150,73 +154,94 @@
                 }
             }
             return sumOfLateCharge;
-
         }
+
         /**
          * Hàm thuê đĩa: thêm hóa đơn, chi tiết hóa đơn,cập nhật trạng thái đĩa từ onshelf to rented
          * 
          * 
          */
+        /// <summary>
+        /// The ProcedureToRentDisk.
+        /// </summary>
+        /// <returns>The <see cref="bool"/>.</returns>
         public bool ProcedureToRentDisk()
         {
-            
-                DateTime date = DateTime.Now;
-                int customerID = _view.CustomerID;
-                List<int> listIDOfDisk = _view.ListDiskId;
-                Bill bill = new Bill();
-                bill.CustomerId = customerID;
-                bill.CreateDate = date;
 
-                //List<BillDetail> billDetails = new List<BillDetail>();
+            DateTime date = DateTime.Now;
+            int customerID = _view.CustomerID;
+            List<int> listIDOfDisk = _view.ListDiskId;
+            Bill bill = new Bill();
+            bill.CustomerId = customerID;
+            bill.CreateDate = date;
 
-                foreach (int idDisk in listIDOfDisk)
-                {
-                    int rentTime = (from d in _context.C_Disk
-                                    join ct in _context.Categories
-                                    on d.CategoryId equals ct.Id
-                                    where d.Id == idDisk
-                                    select ct.RentTime).FirstOrDefault() ?? 0;
+            //List<BillDetail> billDetails = new List<BillDetail>();
 
-                    BillDetail billDetail = new BillDetail();
-                    billDetail.RowID = Guid.NewGuid();
-                    billDetail.DiskID = idDisk;
-                    billDetail.DueDate = date.AddDays(rentTime);
-                    bill.BillDetails.Add(billDetail);
-               
-                    C_Disk disk = _context.C_Disk.Find(idDisk);
-                    disk.C_Status = "rented";
-                    _context.C_Disk.Attach(disk);
-                    _context.Entry(disk).Property(d => d.C_Status).IsModified = true;
+            foreach (int idDisk in listIDOfDisk)
+            {
+                int rentTime = (from d in _context.C_Disk
+                                join ct in _context.Categories
+                                on d.CategoryId equals ct.Id
+                                where d.Id == idDisk
+                                select ct.RentTime).FirstOrDefault() ?? 0;
+
+                BillDetail billDetail = new BillDetail();
+                billDetail.RowID = Guid.NewGuid();
+                billDetail.DiskID = idDisk;
+                billDetail.DueDate = date.AddDays(rentTime);
+                bill.BillDetails.Add(billDetail);
+
+                C_Disk disk = _context.C_Disk.Find(idDisk);
+                disk.C_Status = "rented";
+                _context.C_Disk.Attach(disk);
+                _context.Entry(disk).Property(d => d.C_Status).IsModified = true;
 
                 //bo sung delete customer in messsageonhold
-                var messageOnhold =( from m in _context.MessageOnHolds
-                                        join t in _context.Titles
-                                        on m.TitleID equals t.Id
-                                        where t.C_Disk.Any(td => td.Id == idDisk) && m.CustomerID == customerID
-                                        select m).FirstOrDefault();
-                if (messageOnhold != null)
-                    _context.MessageOnHolds.Remove(messageOnhold);
+                //var messageOnhold = (from m in _context.MessageOnHolds
+                //                     join t in _context.Titles
+                //                     on m.TitleID equals t.Id
+                //                     where t.C_Disk.Any(td => td.Id == idDisk) && m.CustomerID == customerID
+                //                     select m).FirstOrDefault();
+                //if (messageOnhold != null)
+                //    _context.MessageOnHolds.Remove(messageOnhold);
 
 
-                }
-                _context.Bills.Add(bill);
-
-               
-
-
-                try
+            }
+            //delete customer in MessageOnhold
+            var messageOnhold = from m in _context.MessageOnHolds
+                                 join t in _context.Titles
+                                 on m.TitleID equals t.Id
+                                 join d in _context.C_Disk
+                                 on t.Id equals d.TitleID
+                                 join ld in listIDOfDisk
+                                 on d.Id equals ld
+                                 where  m.CustomerID == customerID
+                                 select m;
+            if (messageOnhold.Count()>0)
+            {
+                foreach (var item in messageOnhold)
                 {
-                    
-                    _context.SaveChanges();
-                    return true;
+                    _context.MessageOnHolds.Remove(item);
                 }
-                catch (DbUpdateException)
-                {
+            }    
 
-                    return false;
+            _context.Bills.Add(bill);
 
-                }
+
+
+
+            try
+            {
+
+                _context.SaveChanges();
+                return true;
+            }
+            catch (DbUpdateException)
+            {
+
+                return false;
+
+            }
         }
-        
     }
 }

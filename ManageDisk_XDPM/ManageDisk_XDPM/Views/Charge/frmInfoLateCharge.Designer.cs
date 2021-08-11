@@ -213,7 +213,6 @@ namespace ManageDisk_XDPM.Views.Charge
             this.trvDiskTitles.Name = "trvDiskTitles";
             this.trvDiskTitles.Size = new System.Drawing.Size(453, 880);
             this.trvDiskTitles.TabIndex = 3;
-            this.trvDiskTitles.TabStop = false;
             this.trvDiskTitles.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvDiskTitles_AfterSelect);
             // 
             // lstvDetailCharge

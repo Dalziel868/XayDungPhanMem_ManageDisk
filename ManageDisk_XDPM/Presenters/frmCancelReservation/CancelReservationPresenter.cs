@@ -39,6 +39,36 @@ namespace Presenters.frmCancelReservation
             return null;
             
         }
+        //hàm để kiểm tra có phải là xóa khách hàng cuối đang đặt onhold không, 
+        //để cập nhật lại trạng thái đĩa
+        private void UpdateStatusForDiskOnhold(int titleId)
+        {
+            var checkCustomerReservation = from m in _context.MessageOnHolds
+                                           join t in _context.Titles
+                                           on m.TitleID equals t.Id
+                                           join d in _context.C_Disk
+                                           on t.Id equals d.TitleID
+                                           where m.TitleID == titleId
+                                           select d;
+            if (checkCustomerReservation.Count()==0)
+            {
+                var diskData = from t in _context.Titles
+                               join d in _context.C_Disk
+                               on t.Id equals d.TitleID
+                               where d.C_Status.Equals("onhold") && t.Id==titleId
+                               select d;
+
+                foreach (var item in diskData)
+                {
+                    C_Disk disk = item;
+                    disk.C_Status = "onshelf";
+                    _context.C_Disk.Attach(disk);
+                    _context.Entry(disk).Property(d => d.C_Status).IsModified = true;
+                }
+                _context.SaveChanges();
+
+            }
+        }
         /**
          * xóa data trong bảng MessageOnhold
          */
@@ -50,9 +80,13 @@ namespace Presenters.frmCancelReservation
                 return false;
             var messageOnhold = _context.MessageOnHolds.FirstOrDefault(m => m.CustomerID == customerId && m.TitleID == titleId);
             _context.MessageOnHolds.Remove(messageOnhold);
+
+            
+           
             try
             {
                 _context.SaveChanges();
+                UpdateStatusForDiskOnhold(titleId);
                 return true;
             }
             catch (DbUpdateException)
@@ -61,7 +95,9 @@ namespace Presenters.frmCancelReservation
                 return false;
             }
         }
-
+        /**
+         * Lấy danh sách tên tiêu đề và id tiêu đề để hủy đặt tiêu đề
+         */
         public IEnumerable<TitleToReserveDto> GetListTitleReserved()
         {
             int customerId = _view.CustomerID;

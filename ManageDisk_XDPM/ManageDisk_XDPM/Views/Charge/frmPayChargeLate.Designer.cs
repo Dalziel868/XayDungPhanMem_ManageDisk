@@ -363,11 +363,9 @@ namespace ManageDisk_XDPM.Views.Charge
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1317, 748);
-            this.MinimumSize = new System.Drawing.Size(1317, 748);
             this.Name = "frmPayChargeLate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh Toán Phí Trễ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPayChargeLate_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

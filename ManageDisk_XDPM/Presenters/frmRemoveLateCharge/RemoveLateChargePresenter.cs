@@ -40,11 +40,13 @@ namespace Presenters.frmRemoveLateCharge
                              on bd.DiskID equals d.Id
                              join ct in _context.Categories
                              on d.CategoryId equals ct.Id
+                             join t in _context.Titles
+                             on d.TitleID equals t.Id
                              where c.Id == customerId
                              select new BillDetailForRemoveLateCharge
                              {
                                  RowID=bd.RowID,
-                                 DiskName = d.Name,
+                                 DiskName = t.Name,
                                  DueDate = bd.DueDate,
                                  ReturnDate = bd.ReturnDate,
                                  UnitPrice = ct.UnitPrice ?? 0,

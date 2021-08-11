@@ -96,13 +96,13 @@ namespace ManageDisk_XDPM.Views.Charge
             foreach (var item in listDiskTitle)
             {
                 TreeNode tChild1 = new TreeNode(item.Name);
-                foreach (var item2 in item.TitleNames)
-                {
-                    TreeNode tChild2 = new TreeNode(item2);
-                    tChild2.Tag = item.DiskID;
+                //foreach (var item2 in item.TitleNames)
+                //{
+                //    TreeNode tChild2 = new TreeNode(item2);
+                //    tChild2.Tag = item.DiskID;
 
-                    tChild1.Nodes.Add(tChild2);
-                }
+                //    tChild1.Nodes.Add(tChild2);
+                //}
                 tChild1.Tag = item.DiskID;
                 rootNode.Nodes.Add(tChild1);
             }

@@ -12,8 +12,8 @@ namespace Models.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Title()
         {
-            MessageOnHolds = new HashSet<MessageOnHold>();
             C_Disk = new HashSet<C_Disk>();
+            MessageOnHolds = new HashSet<MessageOnHold>();
         }
 
         public int Id { get; set; }
@@ -22,9 +22,9 @@ namespace Models.Models
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MessageOnHold> MessageOnHolds { get; set; }
+        public virtual ICollection<C_Disk> C_Disk { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<C_Disk> C_Disk { get; set; }
+        public virtual ICollection<MessageOnHold> MessageOnHolds { get; set; }
     }
 }
