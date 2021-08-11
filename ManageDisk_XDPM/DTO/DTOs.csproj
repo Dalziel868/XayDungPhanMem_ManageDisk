@@ -50,6 +50,7 @@
     <Compile Include="Charges\LateChargeDto.cs" />
     <Compile Include="Customers\CustomerForCreateDto.cs" />
     <Compile Include="Customers\CusTomerForRentDiskDto.cs" />
+    <Compile Include="Customers\CustomerForUpdateDTO.cs" />
     <Compile Include="Customers\CustomerInfoLateCharge.cs" />
     <Compile Include="Customers\CustomerLateCharge.cs" />
     <Compile Include="Customers\CustomerToCancelReservation.cs" />

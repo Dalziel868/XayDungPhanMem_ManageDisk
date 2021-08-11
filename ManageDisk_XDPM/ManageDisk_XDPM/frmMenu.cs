@@ -120,7 +120,7 @@ namespace ManageDisk_XDPM
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
-            ActivatedButton(sender);
+            OpenChildForm(new frmUpdateCustomer(), sender);
         }
 
         private void btnDiskStatusReport_Click(object sender, EventArgs e)
