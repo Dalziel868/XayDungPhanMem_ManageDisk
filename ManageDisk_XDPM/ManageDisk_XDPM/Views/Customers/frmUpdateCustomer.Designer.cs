@@ -64,7 +64,6 @@ namespace ManageDisk_XDPM.Customers
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.lvwListCutomers);
             this.panel1.Controls.Add(this.btnCancer);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
@@ -166,10 +165,11 @@ namespace ManageDisk_XDPM.Customers
             // 
             // btnDelete
             // 
+            this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(658, 605);
+            this.btnDelete.Location = new System.Drawing.Point(1549, 826);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(245, 48);
+            this.btnDelete.Size = new System.Drawing.Size(25, 14);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -320,6 +320,7 @@ namespace ManageDisk_XDPM.Customers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1773, 837);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnDelete);
             this.Name = "frmUpdateCustomer";
             this.Text = "Update Customer";
             this.Load += new System.EventHandler(this.frmUpdateCustomer_Load);

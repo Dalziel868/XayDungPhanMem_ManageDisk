@@ -92,13 +92,22 @@ namespace ManageDisk_XDPM.Views.Manager
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(_presenter.RemoveDisk(txtMaDia.Text) == 1)
+            try
             {
-                MessageBox.Show("Xóa thành công đĩa có mã: " +txtMaDia.Text, "THÀNH CÔNG");
-                ReloadListview();
+                if (_presenter.RemoveDisk(txtMaDia.Text) == 1)
+                {
+                    MessageBox.Show("Xóa thành công đĩa có mã: " + txtMaDia.Text, "THÀNH CÔNG");
+                    ReloadListview();
+                }
+                else
+                    MessageBox.Show("Mã đĩa không hợp lệ, vui lòng kiểm tra lại mã đĩa", "ERROR");
             }
-            else
+            catch (Exception)
+            {
+
                 MessageBox.Show("Mã đĩa không hợp lệ, vui lòng kiểm tra lại mã đĩa", "ERROR");
+            }
+            
         }
     }
 }

@@ -57,7 +57,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.btnReportDisk.Location = new System.Drawing.Point(633, 103);
             this.btnReportDisk.Name = "btnReportDisk";
             this.btnReportDisk.Size = new System.Drawing.Size(130, 51);
-            this.btnReportDisk.TabIndex = 4;
+            this.btnReportDisk.TabIndex = 1;
             this.btnReportDisk.Text = "Báo Cáo";
             this.btnReportDisk.UseVisualStyleBackColor = true;
             this.btnReportDisk.Click += new System.EventHandler(this.btnReportDisk_Click);
@@ -69,7 +69,7 @@ namespace ManageDisk_XDPM.Views.Disks
             this.txtIdDisk.Location = new System.Drawing.Point(412, 45);
             this.txtIdDisk.Name = "txtIdDisk";
             this.txtIdDisk.Size = new System.Drawing.Size(609, 30);
-            this.txtIdDisk.TabIndex = 2;
+            this.txtIdDisk.TabIndex = 0;
             this.txtIdDisk.Leave += new System.EventHandler(this.txtIdDisk_Leave);
             // 
             // label1
@@ -205,6 +205,7 @@ namespace ManageDisk_XDPM.Views.Disks
             // 
             // frmReportStatus
             // 
+            this.AcceptButton = this.btnReportDisk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1336, 592);

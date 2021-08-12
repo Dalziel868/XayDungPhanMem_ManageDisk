@@ -44,7 +44,7 @@ namespace Presenters.frmReportStatus
                 var diskData = (from d in _context.C_Disk
                                 join t in _context.Titles
                                 on d.TitleID equals t.Id
-                                where d.Id == diskId
+                                where d.Id == diskId && d.C_Status.Equals("onshelf")
                                 select new DiskOnshelfDto
                                 {
                                     Name = t.Name,
@@ -63,7 +63,7 @@ namespace Presenters.frmReportStatus
                                 on bd.BillID equals b.Id
                                 join c in _context.Customers
                                 on b.CustomerId equals c.Id
-                                where d.Id == diskId && bd.ReturnDate == null
+                                where d.Id == diskId && bd.ReturnDate == null && d.C_Status.Equals("rented")
                                 select new DiskRentedDto
                                 {
                                     Name = t.Name,
@@ -83,13 +83,9 @@ namespace Presenters.frmReportStatus
                                 on d.TitleID equals t.Id
                                 join ms in _context.MessageOnHolds
                                 on t.Id equals ms.TitleID
-                                join bd in _context.BillDetails
-                                on d.Id equals bd.DiskID
-                                join b in _context.Bills
-                                on bd.BillID equals b.Id
                                 join c in _context.Customers
-                                on b.CustomerId equals c.Id
-                                where d.Id == diskId
+                                on ms.CustomerID equals c.Id
+                                where d.Id == diskId && d.C_Status.Equals("onhold")
                                 orderby ms.BookTime ascending
                                 select new DiskOnHoldDto
                                 {
