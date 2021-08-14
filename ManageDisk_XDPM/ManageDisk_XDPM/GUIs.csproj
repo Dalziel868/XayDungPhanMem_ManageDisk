@@ -59,6 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmFirstForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirstForm.Designer.cs">
+      <DependentUpon>frmFirstForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegexExpression\RegularExpression.cs" />
     <Compile Include="Views\Charge\frmInfoLateCharge.cs">
       <SubType>Form</SubType>
@@ -141,6 +147,9 @@
     <Compile Include="Views\Manager\frrtInsertDisk.Designer.cs">
       <DependentUpon>frrtInsertDisk.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmFirstForm.resx">
+      <DependentUpon>frmFirstForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Charge\frmInfoLateCharge.resx">
       <DependentUpon>frmInfoLateCharge.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,8 +219,10 @@
     <Content Include="Images\checkCharge.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\icon404.png" />
+    <Content Include="Images\iconhide25.png" />
     <Content Include="Images\iconNotice.png" />
     <Content Include="Images\iconSales.png" />
+    <Content Include="Images\iconshutdown.png" />
     <Content Include="Images\logo3.jpg" />
     <Content Include="Images\reseration.png" />
     <Content Include="Images\themkhach.png" />
